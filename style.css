@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+.header{
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+.game{
+    font-family: 'Roboto';
+    font-size: 28px;
+    color: rgb(217, 60, 60);
+    text-decoration:none;
+    margin-top: 10px;
+    
+}
+.wrapper{
+    padding: 0;
+    margin: 0 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.game-one{
+    color: white;
+}
+.button-box{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-size: 28px;
+    color: white;
+    background-color: black;
+    width: 250px;
+    height: 60px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+.load{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	background-color: #e0e0e0;
+    z-index: 1001;
+	width: 100%;
+	height: 100%;
+}
+.load hr{
+	border:0;
+	margin:0;
+	width:40px;
+	height:40px;
+	top:45%;
+	left:45%;
+	transform:translate(-45%, -50%);
+	position: absolute;
+	border-radius:50%;
+	animation:spin 2s ease infinite
+}
+
+.load :first-child{
+	background:#19A68C;
+	animation-delay:-1.5s}
+.load :nth-child(2){
+	background:#F63D3A;
+	animation-delay:-1s}
+.load :nth-child(3){
+	background:#FDA543;
+	animation-delay:-0.5s}
+.load :last-child{
+	background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+.loaded_hiding .load{
+	transition: 3s;
+	opacity: 0;
+  }
+  
+.loaded .load{
+	display: none;
+  }
+
